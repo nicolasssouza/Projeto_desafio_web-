@@ -1,8 +1,8 @@
 body{
     font-family: Arial, sans serif;
     text-align: center;
-    background-color: aqua;
+    background-color: rgb(211, 223, 223);
 }
 h1{
-    color: navy;
+    color: rgba(0, 0, 139, 0.863);
 }

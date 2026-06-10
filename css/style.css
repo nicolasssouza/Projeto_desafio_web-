@@ -1,6 +1,6 @@
 body{
     font-family: Arial, sans serif;
-    background-color: rgb(212, 214, 214);
+    background-color: rgb(165, 179, 206);
 }
 h1{
     color: rgba(0, 0, 139, 0.863);
@@ -10,7 +10,7 @@ h1{
     text-align: center;
  }
  
- labe, input{
+ label, input{
     display: block;
     margin: 10px 0px;
  }

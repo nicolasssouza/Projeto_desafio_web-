@@ -44,7 +44,7 @@ console.log(num2)
 console.log("Valor de num" + num)
 console.log('Valor de num3', num3)
 console.log(`Valor de num2 ${num2}`)
-console.log('A soma dos números' + 15 + 8)
+console.log('A soma dos números' + (15 + 8))
 console.log('A soma dos números', 15 + 8)
 console.log(`A soma dos números ${15 + 8}`)
 console.log('A soma dos números' +num + num2)
@@ -115,7 +115,7 @@ console.log(`RESTO DA DIVISÃO ${num3 % 3}`)
     console.log(`COM IDADE DE ${idade}, 10 ANOS PARA RENOVAR`)
   }else if(idade < 70){
     console.log(`COM A IDADE de ${idade}, 5 ANOS PARA RENOVAR`)
-  }else{
+  }else {
     console.log(`COM A IDADE DE ${idade}, 3 ANOS PARA RENOVAR`)
   }
 

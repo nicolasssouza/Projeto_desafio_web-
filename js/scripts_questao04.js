@@ -8,16 +8,25 @@ formDados.addEventListener('submit', (evt)=>{
 
     const objFormDados = new FormData(formDados)
 
-    let distancia = parseFloat(objFormDados.get('Distância'))
-    let consumo = parseFloat(objFormDados.get('Consumo'))
-    let preço = parseFloat(objFormDados.get('Preço'))
-     
-    let quantidade = distancia / consumo
-
+    let nome = objFormDados.get('Nome')
+    let nota1 = parseFloat(objFormDados.get('Nota1'))
+    let nota2 = parseFloat(objFormDados.get('Nota2'))
+    let nota3 = parseFloat(objFormDados.get('Nota3'))
     
+    let media = (nota1 + nota2 + nota3) /3
+    
+    let situacaoaprovacao = ''
+    
+    if (media >= 6){
+        situacaoaprovacao = `Aprovado`
+    }else{
+        situacaoaprovacao = `Reprovado`
+    }
 
-    divResultado.innerHTML = `A quantidade de combustível necessário é de: ${quantidade.toFixed(2).replace('.',',')}l , O valor total a pagar com combustível para esse
-    deslocamento é de: . ${parseFloat(quantidade * preço).toFixed(2).replace('.',',')}R$`
-
+    divResultado.innerHTML = `${nome}, sua media é ${media.toFixed(2)}, ${situacaoaprovacao}`
+    
+    
+     
+    
     formDados.reset()
 })

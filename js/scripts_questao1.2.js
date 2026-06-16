@@ -3,25 +3,22 @@ const formDados = document.querySelector('#formulario')
 const divResultado = document.querySelector('#div-dados')
 
 //CAPTURANDO O EVENTO SUBMIT DO FORMULÁRIO
-formDados.addEventListener('submit', (evt)=>{
+formDados.addEventListener('submit', (evt) => {
     evt.preventDefault()
 
-    const objFormDados = new FormData(formDados)
+    const objformDados = new FormData(formDados)
 
-    let codigo = objFormDados.get('codigo');
-    let senha = objFormDados.get('senha');
-    
-    if (codigo === 'ABCD1234' && senha === '1234') {
-        divResultado.innerHTML = 'ACESSO PERMITIDO';
+    let codigo = 'ABCD1234'
+    let senha = '1234'
+
+    let codigoDigitado = objformDados.get('codigo')
+    let senhaDigitada = objformDados.get('senha')
+
+    if (codigo === codigoDigitado && senha === senhaDigitada) {
+        divResultado.innerHTML = 'ACESSO PERMITIDO'
     } else {
-        divResultado.innerHTML = 'ACESSO NEGADO';
+        divResultado.innerHTML = 'ACESSO NEGADO'
     }
-  console.log(numero);
-  
 
- divResultado.innerHTML = numero
-   
-  
-   formDados.reset()
-   
-  })
+    formDados.reset()
+})

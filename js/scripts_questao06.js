@@ -8,23 +8,33 @@ formDados.addEventListener('submit', (evt)=>{
 
     const objFormDados = new FormData(formDados)
 
-    let lado1 = parseFloat(objFormDados.get('Lado1'))
-    let lado2 = parseFloat(objFormDados.get('Lado2'))
-    let lado3 = parseFloat(objFormDados.get('Lado3'))
-    
-    let tipodetriângulo = ''
-    
-    if (lado1 == lado2 && lado2 == lado3) {
-        tipodetriângulo = "Equilátero: possui os 3 lados iguais.";
-    } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
-        tipodetriângulo = "Isósceles: possui 2 lados iguais.";
-    } else {
-        tipodetriângulo = "Escaleno: possui 3 lados diferentes.";
-    }
-    
-    
-    divResultado.innerHTML = `Seu triângulo é ${tipodetriângulo}`
-    
-    
-    formDados.reset()
-})
+ 
+    let peso = parseFloat(objFormDados.get('peso'))
+    let altura = parseFloat(objFormDados.get('altura'))
+   
+
+    let imc = peso / (altura**2)
+
+  if (imc <=20){
+     faixaderisco = "Está abaixo do peso"
+
+  }else if (imc >= 20 && imc <=25){
+    faixaderisco = "Está com o peso normal"
+
+  }else if (imc >= 25 && imc <=30){
+     faixaderisco = "Está acima do peso"
+
+  }else if(imc >= 30 && imc <=35){
+     faixaderisco = "Obesidade"
+       
+
+  }else(imc >= 30)
+        faixadersico = "Obesidade mórbida"
+      
+
+   divResultado.innerHTML = faixaderisco
+   
+  
+   formDados.reset()
+   
+  })
